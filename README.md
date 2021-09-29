@@ -7,6 +7,13 @@ This API deals with database that contains students and admins, each admin has o
 
 #### **Use this Links to use the API**
 
+* Login User, POST Request 
+(http://localhost:8080/api/login)
+
+* Refresh the access token of the logged in user GET Request
+(http://localhost:8080/api/v1/token/refresh)
+
+students:
 * To Show all students in the database GET Request
 (http://localhost:8080/api/v1/students/)
 
@@ -19,6 +26,18 @@ This API deals with database that contains students and admins, each admin has o
 * To edit Student in the database, PUT Request 
 (http://localhost:8080/api/v1/students/) 
 
+Admins:
+* To add admin to the database POST Request
+(http://localhost:8080/api/v1/admins/save)
+
+* To Show all admins in the database GET Request
+(http://localhost:8080/api/v1/admins/)
+
+* To add role to the database POST Request
+(http://localhost:8080/api/v1/roles/save)
+
+* To add role to an existing admin to the database POST Request
+(http://localhost:8080/api/v1/roles/addtoadmin)
 
 ### Built with
 
