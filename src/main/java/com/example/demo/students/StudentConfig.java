@@ -34,7 +34,7 @@ public class StudentConfig {
 
             repository.saveAll(List.of(a,b));
 
-
+/*
             adminService.saveRole(new Role("ROLL_USER"));
             adminService.saveRole(new Role("ROLL_MANAGER"));
             adminService.saveRole(new Role("ROLL_ADMIN"));
@@ -58,6 +58,8 @@ public class StudentConfig {
 
             adminService.addRoleToAdmin("Sam@gmail.com","ROLL_ADMIN");
             adminService.addRoleToAdmin("Sam@gmail.com","ROLL_SUPER_ADMIN");
+
+            */
         };
     }
 }

@@ -8,6 +8,7 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -19,6 +20,14 @@ public class AdminService implements IAdminService, UserDetailsService {
 
     private final RolesRepository rolesRepository;
     private final AdminRepository adminRepository;
+    private final PasswordEncoder passwordEncoder;
+
+    @Autowired
+    public AdminService(RolesRepository rolesRepository, AdminRepository adminRepository, PasswordEncoder passwordEncoder) {
+        this.rolesRepository = rolesRepository;
+        this.adminRepository = adminRepository;
+        this.passwordEncoder = passwordEncoder;
+    }
 
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
@@ -35,15 +44,10 @@ public class AdminService implements IAdminService, UserDetailsService {
         return new User(admin.getEmail(),admin.getPassword(),authorities);
     }
 
-    @Autowired
-    public AdminService(RolesRepository rolesRepository, AdminRepository adminRepository) {
-        this.rolesRepository = rolesRepository;
-        this.adminRepository = adminRepository;
-    }
-
     @Override
     public Admin saveAdmin(Admin admin) {
         System.out.println("Saving Admin");
+        admin.setPassword(passwordEncoder.encode(admin.getPassword()));
         return adminRepository.save(admin);
     }
 
