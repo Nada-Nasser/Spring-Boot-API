@@ -1,5 +1,5 @@
 # Simple Spring Boot API
-This API deals with database that contains students and admins, each admin has one or more role in the database. using this api, you can add or delete admins, roles and students.
+This API deals with a database that contains students and admins, each admin has one or more roles in the database. using this API, you can add or delete admins, roles, and students.
 
 # Getting Started
 
