@@ -7,6 +7,8 @@ This API deals with database that contains students and admins, each admin has o
 
 #### **Use this Links to use the API**
 
+Authentication and Authorization
+
 * Login User, POST Request 
 (http://localhost:8080/api/login)
 
