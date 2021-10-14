@@ -24,10 +24,10 @@ public class Student {
     private String name;
     private String email;
     private LocalDate dateOfBirth;
-
+/*
     @Transient
     private int age;
-
+*/
     public Student() {
     }
 
@@ -75,7 +75,7 @@ public class Student {
     public void setDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
-
+/*
     public int getAge() {
         return Period.between(this.dateOfBirth,LocalDate.now()).getYears();
     }
@@ -83,7 +83,7 @@ public class Student {
     public void setAge(int age) {
         this.age = age;
     }
-
+*/
     @Override
     public String toString() {
         return "Student{" +
@@ -91,7 +91,7 @@ public class Student {
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", dateOfBirth=" + dateOfBirth +
-                ", age=" + age +
+    //            ", age=" + age +
                 '}';
     }
 }

@@ -36,10 +36,10 @@ public class AdminService implements IAdminService, UserDetailsService {
         );
 
         ArrayList<SimpleGrantedAuthority> authorities = new ArrayList<>();
-
+/*
         admin.getRoles().forEach(role -> {
             authorities.add(new SimpleGrantedAuthority(role.getName()));
-        });
+        });*/
 
         return new User(admin.getEmail(),admin.getPassword(),authorities);
     }
@@ -68,7 +68,7 @@ public class AdminService implements IAdminService, UserDetailsService {
         );
 
         System.out.println("Add Role to Admin");
-        admin.getRoles().add(role);
+  //      admin.getRoles().add(role);
     }
 
     @Override

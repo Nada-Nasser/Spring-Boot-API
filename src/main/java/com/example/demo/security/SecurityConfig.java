@@ -47,13 +47,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private void authenticationConfiguration(HttpSecurity http) throws Exception {
         http.csrf().disable();
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-        http.authorizeRequests().antMatchers("/api/login" , "/api/v1/token/refresh").permitAll();
+
+        http.authorizeRequests().anyRequest().permitAll();
+
+        /*http.authorizeRequests().antMatchers("/api/login" , "/api/v1/token/refresh").permitAll();
+
 
         http.authorizeRequests().antMatchers("/api/v1/students/**").hasAnyAuthority("ROLL_USER");
         http.authorizeRequests().antMatchers("/api/v1/admins/**").hasAnyAuthority("ROLL_SUPER_ADMIN");//
         http.authorizeRequests().antMatchers("/api/v1/roles/**").hasAnyAuthority("ROLL_ADMIN","ROLL_MANAGER");
 
-        http.authorizeRequests().anyRequest().authenticated();
+        http.authorizeRequests().anyRequest().authenticated();*/
     }
 
     @Bean

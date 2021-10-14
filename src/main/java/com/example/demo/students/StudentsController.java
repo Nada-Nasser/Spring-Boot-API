@@ -23,6 +23,7 @@ public class StudentsController {
 
     @PostMapping
     public void addStudent(@RequestBody Student student){
+        System.out.println("Adding a new Student");
         studentService.addNewStudent(student);
     }
 

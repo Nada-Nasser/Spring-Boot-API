@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 @Configuration
 public class AdminRoleConfig {
-
+/*
     @Bean
     CommandLineRunner AdminRoleConfiguration(AdminService adminService){
         return args -> {
@@ -42,5 +42,5 @@ public class AdminRoleConfig {
 
         };
     }
-
+*/
 }

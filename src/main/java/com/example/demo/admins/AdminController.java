@@ -68,7 +68,7 @@ public class AdminController {
         return ResponseEntity.ok().build();
     }
 
-
+/*
     @GetMapping(path="/token/refresh")
     public void refreshToken(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String authorizationHeader = request.getHeader(AUTHORIZATION);
@@ -122,6 +122,6 @@ public class AdminController {
             throw new RuntimeException("The refresh token is missing");
         }
     }
-
+*/
 }
 
